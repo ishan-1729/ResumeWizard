@@ -1,0 +1,239 @@
+/* Main styles for the CV Template Converter extension */
+
+/* Extension button in Overleaf */
+.cv-converter-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background-color: #2c8b58;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.cv-converter-btn:hover {
+  background-color: #1e6e45;
+}
+
+/* Panel that appears when button is clicked */
+.cv-converter-panel {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 350px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.cv-converter-panel.hidden {
+  display: none;
+}
+
+.cv-converter-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaecef;
+}
+
+.cv-converter-panel-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.cv-converter-panel-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #586069;
+  cursor: pointer;
+}
+
+.cv-converter-panel-body {
+  padding: 16px;
+}
+
+/* Steps */
+.cv-converter-step {
+  margin-bottom: 24px;
+}
+
+.cv-converter-step h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.cv-converter-step p {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: #586069;
+}
+
+/* Status messages */
+.status-message {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: #f6f8fa;
+}
+
+.status-message.hidden {
+  display: none;
+}
+
+.status-message.success {
+  background-color: #e6ffed;
+  color: #22863a;
+}
+
+.status-message.error {
+  background-color: #ffeef0;
+  color: #cb2431;
+}
+
+/* Buttons */
+.cv-converter-step button {
+  padding: 6px 12px;
+  background-color: #0366d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cv-converter-step button:hover {
+  background-color: #0255b3;
+}
+
+.cv-converter-step button:disabled {
+  background-color: #959da5;
+  cursor: not-allowed;
+}
+
+/* Input fields */
+.cv-converter-step input[type="text"],
+.cv-converter-step select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+/* Popular templates dropdown */
+.popular-templates {
+  margin-bottom: 16px;
+}
+
+.popular-templates select {
+  width: 100%;
+}
+
+/* Conversion results */
+.conversion-results {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f1f8ff;
+  border-radius: 4px;
+}
+
+.conversion-results h4 {
+  margin: 0 0 8px 0;
+  color: #0366d6;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.result-actions button {
+  flex: 1 0 calc(50% - 8px);
+  margin-bottom: 8px;
+}
+
+/* Modal for preview */
+.cv-converter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.cv-converter-modal-content {
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-converter-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.cv-converter-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cv-converter-modal-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cv-converter-modal-body {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.cv-converter-modal-body pre {
+  background-color: #f6f8fa;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}

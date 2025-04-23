@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Wizard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1>Resume Wizard</h1>
+    </header>
+    
+    <main>
+      <div class="status-message">
+        <p id="status-text">Looking for CV document...</p>
+      </div>
+      
+      <div class="actions" id="actions-container">
+        <!-- Actions will be added dynamically based on page context -->
+      </div>
+      
+      <div class="templates-section hidden" id="templates-section">
+        <h2>Popular Templates</h2>
+        <div class="template-list">
+          <div class="template-card" data-template="https://www.overleaf.com/latex/templates/awesome-cv/dfnvtnhzhhbm">
+            <div class="template-image">
+              <img src="images/templates/awesome-cv.png" alt="Awesome CV">
+            </div>
+            <div class="template-info">
+              <h3>Awesome CV</h3>
+              <p>A modern CV template with clean design</p>
+            </div>
+          </div>
+          
+          <div class="template-card" data-template="https://www.overleaf.com/latex/templates/deedy-resume/bjryvfsjdyxz">
+            <div class="template-image">
+              <img src="images/templates/deedy-resume.png" alt="Deedy Resume">
+            </div>
+            <div class="template-info">
+              <h3>Deedy Resume</h3>
+              <p>Compact and elegant one-page design</p>
+            </div>
+          </div>
+          
+          <div class="template-card" data-template="https://www.overleaf.com/latex/templates/moderncv-classic/qzxmwmmkqzjv">
+            <div class="template-image">
+              <img src="images/templates/moderncv.png" alt="ModernCV">
+            </div>
+            <div class="template-info">
+              <h3>ModernCV Classic</h3>
+              <p>Professional classic style CV</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="custom-template">
+          <h2>Custom Template</h2>
+          <div class="input-group">
+            <input type="text" id="custom-template-url" placeholder="Paste Overleaf template URL">
+            <button id="use-custom-template">Use</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Made with ❤️ for LaTeX lovers</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
