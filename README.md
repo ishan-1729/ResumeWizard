@@ -35,7 +35,7 @@ Resume Wizard uses AI to extract structured information from your current LaTeX 
 - More template options
 - Document format conversion (LaTeX to Word, PDF to LaTeX)
 - Custom field mapping for specialized templates
-- Local processing option for enhanced privacy
+- Local processing option with local LLMs for enhanced privacy
 
 ---
 
